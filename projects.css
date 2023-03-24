@@ -1,0 +1,288 @@
+/* .name {
+  --bg-size: 400%;
+  --color-one: blue;
+  --color-two: green;
+  font-family: sans-serif;
+  font-size: clamp(3rem, 25vmin, 8rem);
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  place-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .name {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+} */
+
+:root {
+  --grad-1: rgb(184, 112, 163);
+  --grad-2: rgb(143, 215, 73);
+  --bg-color: #7d9fd2;
+  --f-size: 15px;
+  --f-color: black;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+  color: var(--f-color);
+  flex-wrap: wrap;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  border: 5px solid yellow;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  margin: 0px;
+}
+.logo {
+  /* width: auto;
+    height: auto; */
+  height: 120px;
+  width: 120px;
+}
+.logo img {
+  cursor: pointer;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.logo :hover {
+  height: 130px;
+  width: 130px;
+  margin-top: 3px;
+}
+.content {
+  width: 40%;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+.welcome {
+  width: auto;
+  height: auto;
+  font-size: 150%;
+  padding: 2px 0px 2px 0px;
+  margin: 2px 0px 2px 0px;
+}
+.text {
+  width: auto;
+  height: auto;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  border-left: 4px solid grey;
+  padding-left: 30px;
+}
+.right-side {
+  width: 40%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.icon-contact {
+  display: flex;
+  height: 50px;
+  width: auto;
+  padding: 20px;
+  padding-right: 0px;
+  margin: 0px;
+}
+.icon-contact img {
+  padding: 5px;
+  height: 50px;
+  width: 50px;
+}
+.burger {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: 10px;
+  display: none;
+}
+.pages {
+  margin-top: 100;
+  position: relative;
+  top: 120px;
+  /* border: 3px solid green; */
+}
+.pages h3 {
+  font-size: 200%;
+}
+.pages ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+.pages li {
+  text-decoration: none;
+  margin: 10px;
+}
+.pages ul li a {
+  text-decoration: none;
+  text-shadow: 2px solid black;
+  border-left: 4px solid grey;
+  margin: 30px;
+  font-size: 150%;
+  color: var(--f-color);
+}
+
+.pages ul li a:hover {
+  border-left: 5px solid grey;
+  font-size: 155%;
+  font-weight: 900px;
+}
+
+.pages .active {
+  border-left: 4px solid black;
+  font-size: 130%;
+}
+.pages .active:hover {
+  border-left: 5px solid black;
+}
+
+.footer {
+  text-align: center;
+  height: auto;
+  background: blanchedalmond;
+  margin-top: -15px;
+  width: inherit;
+}
+
+@media only screen and (max-width: 1320px) {
+  body {
+    padding: 0px;
+  }
+  .footer {
+    position: absolute;
+    bottom: -200px;
+    right: 10px;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1007px) {
+}
+@media only screen and (max-width: 640px) {
+  body {
+    display: inline-block;
+  }
+  .container {
+    display: inline-block;
+    height: auto;
+
+    width: 100%;
+    border: 5px solid yellow;
+    box-sizing: border-box;
+
+    padding: 0px;
+  }
+
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+  .logo img {
+    height: 100px;
+    width: 100px;
+  }
+  .logo :hover {
+    height: 110px;
+    width: 110px;
+  }
+  .icon-contact {
+    height: 10px;
+    width: auto;
+    position: absolute;
+    top: -10px;
+    right: 80px;
+    margin-left: 0px;
+  }
+  .icon-contact img {
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+  }
+  .content {
+    width: 40%;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+  .welcome {
+    width: auto;
+    height: auto;
+    font-size: 150%;
+    padding: 2px 0px 2px 0px;
+    margin: 2px 0px 2px 0px;
+  }
+  .text {
+    width: 70vw;
+    border: 1px solid black;
+    height: auto;
+    display: inline-block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    border-left: 4px solid grey;
+    margin-top: -20px;
+  }
+  .pages {
+    /* position: absolute;
+      bottom: -100px; */
+  }
+  .pages {
+    margin-top: 100;
+    position: relative;
+    top: 420px;
+    left: -230px;
+  }
+  .pages h3 {
+    font-size: 130%;
+  }
+  .pages ul {
+    text-decoration: none;
+  }
+  .pages li {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 0px;
+    width: 150px;
+  }
+  .pages ul li a {
+    margin: 10px;
+    font-size: 120%;
+  }
+
+  .pages ul li a:hover {
+    border-left: 5px solid grey;
+    font-size: 125%;
+    font-weight: 700px;
+  }
+  .burger {
+    display: block;
+  }
+  .footer {
+    position: absolute;
+    bottom: -280px;
+    right: 10px;
+    text-align: center;
+  }
+}
